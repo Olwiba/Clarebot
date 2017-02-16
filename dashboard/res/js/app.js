@@ -67,32 +67,35 @@ function weeklyJobs() {
 // Timing Calls
 function checkTime() {
 
+  var currentSeconds = new Date().getSeconds();
+  var currentMinutes = new Date().getMinutes();
   var currentHour = new Date().getHours();
   var currentDay = new Date().getDay();
 
   var daysLeft = 7 - currentDay;
+  var minsLeft = 60 - currentMinutes;
   var hrsLeft = 24 - currentHour;
-  var secsLeft = 60 - new Date().getSeconds();
+  var secsLeft = 60 - currentSeconds;
 
-  $('#bathroom-up--daily-timer').html(hrsLeft + " h " + secsLeft + " s");
-  $('#kitchen--daily-timer').html(hrsLeft + " h " + secsLeft + " s");
-  $('#bathroom-down--daily-timer').html(hrsLeft + " h " + secsLeft + " s");
-  $('#downstairs--daily-timer').html(hrsLeft + " h " + secsLeft + " s");
-  $('#outside--daily-timer').html(hrsLeft + " h " + secsLeft + " s");
+  $('#bathroom-up--daily-timer').html(hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#kitchen--daily-timer').html(hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#bathroom-down--daily-timer').html(hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#downstairs--daily-timer').html(hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#outside--daily-timer').html(hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
 
-  $('#kitchen--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + secsLeft + " s");
-  $('#bathroom-down--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + secsLeft + " s");
-  $('#downstairs--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + secsLeft + " s");
-  $('#bathroom-up--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + secsLeft + " s");
-  $('#hallway--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + secsLeft + " s");
-  $('#lounge--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + secsLeft + " s");
-  $('#outside--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + secsLeft + " s");
+  $('#kitchen--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#bathroom-down--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#downstairs--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#bathroom-up--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#hallway--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#lounge--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
+  $('#outside--weekly-timer').html(daysLeft + " d " + hrsLeft + " h " + minsLeft + " m " + secsLeft + " s");
 
-  if (currentHour == 0) {
+  if (currentHour == 0 && currentMinutes == 0 && currentSeconds == 0) {
     dailyJobs();
   }
 
-  if (currentHour == 0 && currentDay == 0) {
+  if (currentDay == 0 && currentHour == 0 && currentMinutes == 0 && currentSeconds == 0) {
     weeklyJobs();
   }
 }
