@@ -4,9 +4,10 @@
 }
 
 .job-icon {
-  height:14vh;
+  height:13vh;
 }
 
-.card {
-
+.github {
+  height: 40px;
+  width: 40px;
 }

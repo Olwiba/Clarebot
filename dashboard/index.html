@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarebot</title>
+    <link rel="shortcut icon" href="res/img/favicon.png">
 
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,7 +20,7 @@
             <div class="nav-wrapper light-green darken-2">
                 <div class="col s12">
                     <a href="#!" class="brand-logo">Clarebot</a>
-                    <ul class="right">
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
                       <li><a href="about.html">About</a></li>
                       <li class="active"><a href="index.html">Jobs</a></li>
                     </ul>
@@ -31,17 +33,33 @@
         <div class="col s12 m6 l3">
             <div class="card light-green darken-3 z-depth-4">
                 <div class="card-content white-text center">
-                    <img src="res/img/dishwasher.png" alt="Kitchen" class="job-icon">
-                    <span class="card-title">Unassigned</span>
-
+                  <img src="res/img/toilet-paper-up.png" alt="u/s Bathroom" class="job-icon">
+                  <span class="card-title" id="bathroom-up--daily-person">Unassigned</span>
+                  <p>Upstairs Bathroom</p>
+                  <div class="left"><p id="bathroom-up--daily-timer">##</p></div>
+                  <div class="right"><p>Daily</p></div>
                 </div>
             </div>
         </div>
         <div class="col s12 m6 l3">
             <div class="card light-green darken-3 z-depth-4">
                 <div class="card-content white-text center">
-                  <img src="res/img/toilet-paper-up.png" alt="u/s Bathroom" class="job-icon">
-                    <span class="card-title">Unassigned</span>
+                    <img src="res/img/dishwasher.png" alt="Kitchen" class="job-icon">
+                    <span class="card-title" id="kitchen--daily-person">Unassigned</span>
+                    <p>Kitchen</p>
+                    <div class="left"><p id="kitchen--daily-timer">##</p></div>
+                    <div class="right"><p>Daily</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l3">
+            <div class="card green darken-3 z-depth-4">
+                <div class="card-content white-text center">
+                  <img src="res/img/dishwasher.png" alt="Kitchen" class="job-icon">
+                  <span class="card-title" id="kitchen--weekly-person">Unassigned</span>
+                  <p>Kitchen</p>
+                  <div class="left"><p id="kitchen--weekly-timer">##</p></div>
+                  <div class="right"><p>Weekly</p></div>
                 </div>
             </div>
         </div>
@@ -49,15 +67,10 @@
             <div class="card green darken-3 z-depth-4">
                 <div class="card-content white-text center">
                   <img src="res/img/toilet-paper-down.png" alt="d/s Bathroom" class="job-icon">
-                    <span class="card-title">Unassigned</span>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l3">
-            <div class="card green darken-3 z-depth-4">
-                <div class="card-content white-text center">
-                  <img src="res/img/bin.png" alt="Rubbish" class="job-icon">
-                    <span class="card-title">Unassigned</span>
+                  <span class="card-title" id="bathroom-down--weekly-person">Unassigned</span>
+                  <p>Downstairs Bathroom</p>
+                  <div class="left"><p id="bathroom-down--weekly-timer">##</p></div>
+                  <div class="right"><p>Weekly</p></div>
                 </div>
             </div>
         </div>
@@ -67,33 +80,44 @@
         <div class="col s12 m6 l3">
             <div class="card light-green darken-3 z-depth-4">
                 <div class="card-content white-text center">
-                    <img src="res/img/dishwasher.png" alt="Kitchen" class="job-icon">
-                    <span class="card-title">Unassigned</span>
-
+                  <img src="res/img/toilet-paper-down.png" alt="d/s Bathroom" class="job-icon">
+                  <span class="card-title" id="bathroom-down--daily-person">Unassigned</span>
+                  <p>Downstairs Bathroom</p>
+                  <div class="left"><p id="bathroom-down--daily-timer">##</p></div>
+                  <div class="right"><p>Daily</p></div>
                 </div>
             </div>
         </div>
         <div class="col s12 m6 l3">
             <div class="card light-green darken-3 z-depth-4">
                 <div class="card-content white-text center">
+                    <img src="res/img/downstairs.png" alt="Downstairs" class="job-icon">
+                    <span class="card-title" id="downstairs--daily-person">Unassigned</span>
+                    <p>Band Room</p>
+                    <div class="left"><p id="downstairs--daily-timer">##</p></div>
+                    <div class="right"><p>Daily</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l3">
+            <div class="card green darken-3 z-depth-4">
+                <div class="card-content white-text center">
+                  <img src="res/img/downstairs.png" alt="Downstairs" class="job-icon">
+                  <span class="card-title" id="downstairs--weekly-person">Unassigned</span>
+                  <p>Band Room</p>
+                  <div class="left"><p id="bathroom--weekly-timer">##</p></div>
+                  <div class="right"><p>Weekly</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l3">
+            <div class="card green darken-3 z-depth-4">
+                <div class="card-content white-text center">
                   <img src="res/img/toilet-paper-up.png" alt="u/s Bathroom" class="job-icon">
-                    <span class="card-title">Unassigned</span>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l3">
-            <div class="card green darken-3 z-depth-4">
-                <div class="card-content white-text center">
-                  <img src="res/img/toilet-paper-down.png" alt="d/s Bathroom" class="job-icon">
-                    <span class="card-title">Unassigned</span>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l3">
-            <div class="card green darken-3 z-depth-4">
-                <div class="card-content white-text center">
-                  <img src="res/img/bin.png" alt="Rubbish" class="job-icon">
-                    <span class="card-title">Unassigned</span>
+                  <span class="card-title" id="bathroom-up--weekly-person">Unassigned</span>
+                  <p>Upstairs Bathroom</p>
+                  <div class="left"><p id="bathroom-up--weekly-timer">##</p></div>
+                  <div class="right"><p>Weekly</p></div>
                 </div>
             </div>
         </div>
@@ -103,25 +127,33 @@
         <div class="col s12 m6 l3">
             <div class="card light-green darken-3 z-depth-4">
                 <div class="card-content white-text center">
-                    <img src="res/img/dishwasher.png" alt="Kitchen" class="job-icon">
-                    <span class="card-title">Unassigned</span>
-
+                    <img src="res/img/bin.png" alt="Outside/Rubbish" class="job-icon">
+                    <span class="card-title" id="outside--daily-person">Unassigned</span>
+                    <p>Outside / Rubbish</p>
+                    <div class="left"><p id="outside--daily-timer">##</p></div>
+                    <div class="right"><p>Daily</p></div>
                 </div>
             </div>
         </div>
         <div class="col s12 m6 l3">
             <div class="card green darken-3 z-depth-4">
                 <div class="card-content white-text center">
-                  <img src="res/img/toilet-paper-up.png" alt="u/s Bathroom" class="job-icon">
-                    <span class="card-title">Unassigned</span>
+                  <img src="res/img/hallways.png" alt="Hallways" class="job-icon">
+                  <span class="card-title" id="hallway--weekly-person">Unassigned</span>
+                  <p>Hallways</p>
+                  <div class="left"><p id="hallway--weekly-timer">##</p></div>
+                  <div class="right"><p>Weekly</p></div>
                 </div>
             </div>
         </div>
         <div class="col s12 m6 l3">
             <div class="card green darken-3 z-depth-4">
                 <div class="card-content white-text center">
-                  <img src="res/img/toilet-paper-down.png" alt="d/s Bathroom" class="job-icon">
-                    <span class="card-title">Unassigned</span>
+                  <img src="res/img/sofa.png" alt="Lounge" class="job-icon">
+                  <span class="card-title" id="lounge--weekly-person">Unassigned</span>
+                  <p>Lounge</p>
+                  <div class="left"><p id="lounge--weekly-timer">##</p></div>
+                  <div class="right"><p>Weekly</p></div>
                 </div>
             </div>
         </div>
@@ -129,7 +161,10 @@
             <div class="card green darken-3 z-depth-4">
                 <div class="card-content white-text center">
                   <img src="res/img/bin.png" alt="Rubbish" class="job-icon">
-                    <span class="card-title">Unassigned</span>
+                  <span class="card-title" id="outside--weekly-person">Unassigned</span>
+                  <p>Outside / Rubbish</p>
+                  <div class="left"><p id="outside--weekly-timer">##</p></div>
+                  <div class="right"><p>Weekly</p></div>
                 </div>
             </div>
         </div>
@@ -140,6 +175,7 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="res/js/materialize.min.js"></script>
+    <script src="res/js/app.js" charset="utf-8"></script>
 </body>
 
 </html>
