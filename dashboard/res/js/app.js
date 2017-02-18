@@ -98,25 +98,14 @@ function checkTime() {
   if (currentDay == 0 && currentHour == 0 && currentMinutes == 0 && currentSeconds == 0) {
     weeklyJobs();
   }
+
+  setTimeout(checkTime, 1000);
 }
 
 
 // Start
 function start() {
-  checkTime();
-  tickIntervalID = window.setInterval(checkTime, 1000); // check every second
-}
-
-// Stop
-function stop() {
-  window.clearInterval(tickIntervalID);
-}
-
-// Manual
-function resetDaily() {
   dailyJobs();
-}
-
-function resetWeekly() {
-  weeklyJobs();
+  checkTime();
+  setTimeout(checkTime, 1000);
 }
